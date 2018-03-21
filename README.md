@@ -1,9 +1,6 @@
 # Verification-Page
 A simple Page-Protection Verification page developed in [PHP](https://secure.php.net/); used to protect webpages you'd like only people who have access to a key to see.
 
-## Download
-Download the latest version [here](https://github.com/henry7720/PHP-Login-AND-Register/releases).
-
 ## Requirements
 * PHP ≥ 5.4
 
