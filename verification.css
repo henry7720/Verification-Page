@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+input {
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #595959;
+}
