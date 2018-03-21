@@ -8,6 +8,7 @@ Download the latest version [here](https://github.com/henry7720/PHP-Login-AND-Re
 * PHP ≥ 5.4
 
 ## Tutorial
+**Note**: make sure to read the inline comments for further explanation.
 1. Firstly, [download](https://github.com/henry7720/Verification-Page/archive/master.zip) all of the files.
 2. Next, open up [verification.php](verification.php) and replace the `$key` variable's value with your protection key.
 3. Next, open up [example-of-use.php](example-of-use.php) and copy the PHP snippets at the beginning and end of the file.
