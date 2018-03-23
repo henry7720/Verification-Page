@@ -1,4 +1,4 @@
-# Verification-Page
+# Verification Page
 A simple Page-Protection Verification page developed in [PHP](https://secure.php.net/); used to protect webpages you'd like only people who have access to a key to see.
 
 ## Requirements
