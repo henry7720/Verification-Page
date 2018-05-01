@@ -27,6 +27,6 @@ if (isset($_POST["key"])) {
       <input type="text" name="key" id="key" placeholder="Key">
       <input type="submit" value="Verify">
     </form>
-    <p><?php if (isset($error)) echo $error; ?></p>
+    <?php if (isset($error)) echo "<p>$error</p>"; ?>
   </body>
 </html>
