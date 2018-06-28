@@ -5,7 +5,7 @@ if (isset($_SESSION["verified"]) && $_SESSION["verified"]) {
   header("Location: /"); # This statement is important because it checks if the user has been previously verified.
 }
 if (isset($_POST["key"])) {
-  if ($_POST["key"] == $key) {
+  if ($_POST["key"] === $key) {
       $_SESSION["verified"] = true;
       header("Location: /");
   } else {
