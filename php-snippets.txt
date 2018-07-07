@@ -1,0 +1,19 @@
+How to Protect a Page With Verification-Page
+
+1. Add the path of the page you want to protect (e.g. /somerandompage.php) to the $whitelist array in verification.php
+2. Add the first snippet above the doctype declaration (<!DOCTYPE HTML>)
+
+<?php
+session_start();
+if ($_SESSION["verified"]) {
+?>
+
+3. Add the second snippet after the closing html tag (</html>)
+
+<?php
+} else {
+  header("Location: /verification.php?continue=".$_SERVER["PHP_SELF"]);
+}
+?>
+
+4. Done!
