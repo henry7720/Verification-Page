@@ -34,7 +34,7 @@ if (isset($_POST["key"])) {
   <body>
     <h1>Verify to Continue</h1>
     <p>Please enter in the verification key to continue.</p>
-    <form action="verification.php<?php if (isset($_GET["continue"])) echo "?continue=".htmlentities($_GET["continue"]); ?>" method="post" autocomplete="off">
+    <form action="verification.php<?php if (isset($_GET["continue"])) echo "?continue=" . htmlentities($_GET["continue"]); ?>" method="post" autocomplete="off">
       <input type="text" name="key" id="key" placeholder="Key">
       <input type="submit" value="Verify">
     </form>
