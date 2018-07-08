@@ -1,6 +1,6 @@
 How to Protect a Page With Verification-Page
 
-1. Add the path of the page you want to protect (PHP can easily show this with $_SERVER["SCRIPT_NAME"], e.g. /somerandompage.php) to the $whitelist array in verification.php
+1. Add the path of the page you want to protect (e.g. /somerandompage.php) to the $whitelist array in verification.php
 
 2. Add the first snippet above the doctype declaration (<!DOCTYPE HTML>)
 
