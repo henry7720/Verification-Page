@@ -16,6 +16,6 @@ if ($_SESSION["verified"]) {
 </html>
 <?php
 } else {
-  header("Location: /verification.php?continue=".$_SERVER["SCRIPT_NAME"]);
+  header("Location: /verification.php?continue=".$_SERVER["SCRIPT_NAME"]); # This continue url param is processed in verification.php in order to redirect to the original location requested.
 }
 ?>
