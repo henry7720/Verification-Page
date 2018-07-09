@@ -19,11 +19,19 @@ FOR INDEX PAGE;
 }
 ?>
 
-IF NOT INDEX (OR IN DIRECTORIES);
+IF NOT INDEX, BUT DIRECTORIES HAVE INDEX;
 
 <?php
 } else {
   header("Location: /verification.php?continue=" . str_replace("/index.php", "", $_SERVER["SCRIPT_NAME"]));
+}
+?>
+
+IF NOT INDEX OR DIRECTORIES DON'T HAVE INDEX
+
+<?php
+} else {
+  header("Location: /verification.php?continue=" . $_SERVER["SCRIPT_NAME"];
 }
 ?>
 
