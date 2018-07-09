@@ -13,7 +13,7 @@ if ($_SESSION["verified"]) {
 
 <?php
 } else {
-  header("Location: /verification.php?continue=" . $_SERVER["SCRIPT_NAME"];
+  header("Location: /verification.php?continue=" . $_SERVER["SCRIPT_NAME"]);
 }
 ?>
 
