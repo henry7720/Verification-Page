@@ -11,7 +11,7 @@ if ($_SESSION["verified"]) {
     <link rel="stylesheet" href="verification.css">
   </head>
   <body>
-    <h1>Welcome to some secret content! Bored already? Just <a href="/end-session.php">leave</a>...</p>
+    <h1>Welcome to some secret content! Bored already? Just <a href="/end-session.php">leave</a>...</h1>
   </body>
 </html>
 <?php
