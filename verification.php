@@ -9,7 +9,7 @@ if (isset($_POST["key"])) {
     $_SESSION["verified"] = true;
     if (isset($_GET["continue"])) {
       $nextpage = $_GET["continue"];
-      $whitelist = ["/example-of-use.php"]; # Add any other pages you want to be allowed with the continue param.
+      $whitelist = ["/example-of-use.php"]; # Add any other pages you want to be protected with the continue param.
       if (in_array($nextpage, $whitelist)) {
         header("Location: $nextpage");
       } else {
