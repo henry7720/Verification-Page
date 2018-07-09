@@ -6,7 +6,7 @@ See  [README.md](README.md) before continuing on this page.
 
 2. Add the first snippet above the doctype declaration (`<!DOCTYPE HTML>`)
 
-```
+```php
 <?php
 session_start();
 if ($_SESSION["verified"]) {
