@@ -9,25 +9,7 @@ session_start();
 if ($_SESSION["verified"]) {
 ?>
 
-3. Add the second snippet after the closing html tag (</html>), if you are protecting an index page, use the snippet on line 14. If you're inside of a path, however, you may use str_replace to make the URLs look cleaner as shown on line 22.
-
-FOR INDEX PAGE;
-
-<?php
-} else {
-  header("Location: /verification.php");
-}
-?>
-
-IF NOT INDEX, BUT DIRECTORIES HAVE INDEX;
-
-<?php
-} else {
-  header("Location: /verification.php?continue=" . str_replace("/index.php", "", $_SERVER["SCRIPT_NAME"]));
-}
-?>
-
-IF NOT INDEX OR DIRECTORIES DON'T HAVE INDEX OR IF YOU DON'T CARE AND JUST WANT TO USE ONE SNIPPET
+3. Add the second snippet after the closing html tag (</html>)
 
 <?php
 } else {
