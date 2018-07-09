@@ -1,6 +1,6 @@
 How to Protect a Page With Verification-Page
 
-1. Add the path of the page you want to protect (e.g. /somerandompage.php) to the $whitelist array in verification.php
+1. Add the full path of the page you want to protect (including the php filename; can't just be folder names, e.g. /somepath/somerandompage.php or /somerandompage.php) to the $whitelist array in verification.php
 
 2. Add the first snippet above the doctype declaration (<!DOCTYPE HTML>)
 
@@ -9,11 +9,21 @@ session_start();
 if ($_SESSION["verified"]) {
 ?>
 
-3. Add the second snippet after the closing html tag (</html>)
+3. Add the second snippet after the closing html tag (</html>), if you are protecting an index page, use the snippet on line 14. If you're inside of a path, however, you may use str_replace to make the URLs look cleaner as shown on line 22.
+
+FOR INDEX PAGE;
 
 <?php
 } else {
-  header("Location: /verification.php?continue=".$_SERVER["SCRIPT_NAME"]);
+  header("Location: /verification.php");
+}
+?>
+
+IF NOT INDEX (OR IN DIRECTORIES);
+
+<?php
+} else {
+  header("Location: /verification.php?continue=" . str_replace("/index.php", "", $_SERVER["SCRIPT_NAME"]));
 }
 ?>
 
