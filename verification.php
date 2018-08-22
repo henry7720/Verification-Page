@@ -2,17 +2,17 @@
 session_start();
 $key = "test"; # Change this key to whatever key you'd like.
 if (isset($_SESSION["verified"]) && $_SESSION["verified"]) {
-  header("Location: /example-of-use.php");
+  header("Location: /index.php");
 }
 if (isset($_POST["key"])) {
   if ($_POST["key"] === $key) {
     $_SESSION["verified"] = true;
-    $whitelist = ["/example-of-use.php"]; # Add any other pages you want to be protected with the continue param.
+    $whitelist = ["/index.php"]; # Add any other pages you want to be protected with the continue param.
     $nextpage = $_GET["continue"];
     if (isset($nextpage) && in_array($nextpage, $whitelist)) {
       header("Location: $nextpage");
     } else {
-      header("Location: /example-of-use.php");
+      header("Location: /index.php");
     }
   } else {
     $error = "That key is invalid!";
