@@ -2,7 +2,7 @@
 
 See  [README.md](README.md) before continuing on this page or see the [plain text](php-snippets.txt) version.
 
-1. Add the full path of the page you want to protect (including the PHP filename; can't just be folder names, e.g. `/somepath/somerandompage.php` or `/somerandompage.php`) to the `$whitelist` array in [verification.php](verification.php#L12)
+1. Add the full path of the page you want to protect (including the PHP filename; can't just be folder names, e.g. `/somepath/somerandompage.php` or `/somerandompage.php`) to the [`$whitelist` array](verification.php#L15) in [verification.php](verification.php)
 
 2. Add the first snippet above the doctype declaration (`<!DOCTYPE HTML>`)
 
