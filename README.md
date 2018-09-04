@@ -14,4 +14,4 @@ If you are aware of any particular pages you'd like to password-protect, you may
 **Note**: if you are confused, make sure to read the inline comments for further explanation.
 
 ## License
-[MIT](LICENSE)
+[MIT](LICENSE.txt)
