@@ -2,7 +2,7 @@
 
 See  [README.md](README.md) before continuing on this page or see the [plain text](php-snippets.txt) version.
 
-1. Add the full path of the page you want to protect (including the PHP filename; it can't just be folder names, it should look like `/foo/bar.php` or `/bar.php`) to the [`$whitelist` array](verification.php#L15) on line 15 in [verification.php](verification.php).
+1. Add the full path of the page you want to protect (including the PHP filename; it can't just be folder names, it should look like `/foo/bar.php` or `/bar.php`) to the [`$whitelist` array](verification.php#L21) in [verification.php](verification.php).
 
 2. Add the first snippet above the doctype declaration (`<!DOCTYPE HTML>`)
 
