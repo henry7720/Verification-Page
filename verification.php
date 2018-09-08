@@ -1,6 +1,6 @@
 <?php
 session_start();
-$hashedkey = '$2y$10$KoWfbXcpiSazdkt5q8vTxOQ2U40rOzAuZKKKW.kPZeq7ZGazy3AQ.';
+$hashedkey = '$2y$10$xTYSKWUWnUo8dFcf.szEiO1J6nTfg7fOf1.cTx.X23II2sDVLpkC2';
 # Create a hash for a password with hashgenerator.php; in this case, I used "test1234"
 if (isset($_SESSION["verified"]) && $_SESSION["verified"]) {
   header("Location: /index.php");
@@ -8,7 +8,7 @@ if (isset($_SESSION["verified"]) && $_SESSION["verified"]) {
 }
 
 if (isset($_POST["key"])) {
-  $sanitizedinput = trim($_POST["key"]);
+  $sanitizedinput = hash("sha256", trim($_POST["key"]));
   # Sanitized input to make it easier the enter in the password; it is very easy to strengthen these restrictions, or lessen them.
   if (password_verify($sanitizedinput, $hashedkey)) {
     $_SESSION["verified"] = true;
