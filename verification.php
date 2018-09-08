@@ -8,9 +8,9 @@ if (isset($_SESSION["verified"]) && $_SESSION["verified"]) {
 }
 
 if (isset($_POST["key"])) {
-  $sanitizedinput = hash("sha256", trim($_POST["key"]));
+  $sha256hash = hash("sha256", trim($_POST["key"]));
   # Sanitized input to make it easier the enter in the password; it is very easy to strengthen these restrictions, or lessen them.
-  if (password_verify($sanitizedinput, $hashedkey)) {
+  if (password_verify($sha256hash, $hashedkey)) {
     $_SESSION["verified"] = true;
     $whitelist = ["/index.php"];
     # Add any other pages you wish to be accessible through the continue param.
