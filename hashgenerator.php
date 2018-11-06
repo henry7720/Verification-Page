@@ -3,7 +3,7 @@ if (isset($_POST["key"])) {
   $key = trim($_POST["key"]);
   $hashedkey = password_hash(
     base64_encode(
-      hash("sha256", $password, true)
+      hash("sha256", $key, true)
     ),
     PASSWORD_DEFAULT
   );
