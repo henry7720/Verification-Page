@@ -1,6 +1,6 @@
 <?php
 session_start();
-$hashedkey = '$2y$10$mWUUCN1B6NQkWQ1hiTbfD.xZ3Fs7rppU.A2OQm0LU2pWmsn9kVLHC';
+$hashedkey = '$2y$10$jZ8G8YA/b6sAIUMYDsBYNeV.O6p8Paz/6B1GZmK5Atm96mvm8ceOa';
 # Create a hash for a password with hashgenerator.php; in this case, I used "test1234"
 if (isset($_SESSION["verified"]) && $_SESSION["verified"]) {
   header("Location: /index.php");
@@ -11,7 +11,7 @@ if (isset($_POST["key"])) {
   $key = trim($_POST["key"]);
   $verifiedpassword = password_verify(
     base64_encode(
-      hash("sha256", $pass, true)
+      hash("sha256", $key, true)
     ),
     $hashedkey
   );
